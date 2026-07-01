@@ -13,6 +13,7 @@ OUT_DIR = ROOT / "outputs"
 SAMPLE_DIR = OUT_DIR / "sample_images"
 LABELS = ["plastic_rigid", "paper_cardboard", "metal"]
 FEATURE_NAMES = ["blue_ratio", "white_ratio", "gray_ratio", "edge_density"]
+FEATURE_NOISE_STD = 0.45
 
 
 def make_image(label: str, rng: np.random.Generator, size: int = 32) -> Image.Image:
@@ -59,7 +60,11 @@ def generate_dataset(n_per_class: int = 90, seed: int = 42) -> tuple[np.ndarray,
     for label_index, label in enumerate(LABELS):
         for i in range(n_per_class):
             img = make_image(label, rng)
-            rows.append(extract_features(img))
+            features = np.array(extract_features(img), dtype=np.float32)
+            # Simulate imperfect lighting/background conditions so this remains
+            # a validation prototype instead of a trivially perfect toy split.
+            features = np.clip(features + rng.normal(0, FEATURE_NOISE_STD, features.shape), 0, 1)
+            rows.append(features.tolist())
             targets.append(label_index)
             if i < 3:
                 img.save(SAMPLE_DIR / f"{label}_{i}.png")
@@ -122,7 +127,8 @@ def main() -> None:
     y_pred = predict(X_test, weights, bias)
     matrix = confusion_matrix(y_test, y_pred)
     metrics = {
-        "dataset_type": "generated_sample_images",
+        "dataset_type": "generated_sample_images_with_feature_noise",
+        "feature_noise_std": FEATURE_NOISE_STD,
         "train_samples": int(len(y_train)),
         "test_samples": int(len(y_test)),
         "accuracy": round(float(np.mean(y_test == y_pred)), 4),
@@ -148,4 +154,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

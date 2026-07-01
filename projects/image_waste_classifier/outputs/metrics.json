@@ -1,9 +1,10 @@
 {
-  "dataset_type": "generated_sample_images",
+  "dataset_type": "generated_sample_images_with_feature_noise",
+  "feature_noise_std": 0.45,
   "train_samples": 216,
   "test_samples": 54,
-  "accuracy": 1.0,
-  "macro_f1": 1.0,
+  "accuracy": 0.8889,
+  "macro_f1": 0.8886,
   "feature_names": [
     "blue_ratio",
     "white_ratio",

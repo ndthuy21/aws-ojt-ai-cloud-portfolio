@@ -9,7 +9,7 @@ cloud deployment planning.
 | Project | Direct Link | Evidence |
 |---|---|---|
 | ML Inference API | [cloud_ready_ml_api](cloud_ready_ml_api/) | Local `/health` and `/predict` endpoints tested; unit tests included |
-| Image Waste Classifier | [projects/image_waste_classifier](projects/image_waste_classifier/) | 270 generated images, 3 classes, 54-test sample, accuracy 1.0000, macro F1 1.0000 |
+| Image Waste Classifier | [projects/image_waste_classifier](projects/image_waste_classifier/) | 270 generated images with feature noise, 3 classes, 54-test sample, accuracy 0.8889, macro F1 0.8886 |
 | Air Quality Forecasting | [projects/air_quality_forecasting](projects/air_quality_forecasting/) | 360 hourly readings, 68-test rows, MAE 3.3245, RMSE 4.1356 |
 | Weather Traffic Risk | [projects/weather_traffic_risk](projects/weather_traffic_risk/) | 420 records, 84-test rows, accuracy 0.7262, precision 0.8750, recall 0.5122, F1 0.6462 |
 
