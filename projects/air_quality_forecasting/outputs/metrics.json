@@ -1,0 +1,17 @@
+{
+  "dataset_type": "generated_sensor_timeseries",
+  "train_samples": 268,
+  "test_samples": 68,
+  "mae": 3.3245,
+  "rmse": 4.1356,
+  "features": [
+    "temperature",
+    "humidity",
+    "wind_speed",
+    "traffic_index",
+    "pm25_lag_1",
+    "pm25_lag_24",
+    "hour_sin",
+    "hour_cos"
+  ]
+}

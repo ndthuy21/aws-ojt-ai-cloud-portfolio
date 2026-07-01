@@ -1,0 +1,23 @@
+{
+  "bias": -4.186423,
+  "weights": [
+    0.369265,
+    0.393644,
+    -3.725585,
+    0.405017,
+    0.114723,
+    0.027317,
+    -0.646102,
+    0.157853
+  ],
+  "features": [
+    "temperature",
+    "humidity",
+    "wind_speed",
+    "traffic_index",
+    "pm25_lag_1",
+    "pm25_lag_24",
+    "hour_sin",
+    "hour_cos"
+  ]
+}

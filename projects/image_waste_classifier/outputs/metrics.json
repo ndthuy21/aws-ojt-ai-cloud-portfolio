@@ -1,0 +1,18 @@
+{
+  "dataset_type": "generated_sample_images",
+  "train_samples": 216,
+  "test_samples": 54,
+  "accuracy": 1.0,
+  "macro_f1": 1.0,
+  "feature_names": [
+    "blue_ratio",
+    "white_ratio",
+    "gray_ratio",
+    "edge_density"
+  ],
+  "labels": [
+    "plastic_rigid",
+    "paper_cardboard",
+    "metal"
+  ]
+}
