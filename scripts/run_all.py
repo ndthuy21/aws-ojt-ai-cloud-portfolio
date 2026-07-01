@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import json
-import shutil
 import subprocess
 import sys
 from pathlib import Path
@@ -25,11 +24,6 @@ def main() -> None:
     run([python, "projects/air_quality_forecasting/forecast.py"])
     run([python, "projects/weather_traffic_risk/analyze.py"])
 
-    image_model = ROOT / "projects" / "image_waste_classifier" / "outputs" / "model.json"
-    api_model = ROOT / "cloud_ready_ml_api" / "model.json"
-    shutil.copyfile(image_model, api_model)
-    print(f"Updated API model artifact: {api_model.relative_to(ROOT)}")
-
     run([python, "-m", "unittest", "discover", "-s", "tests"])
 
     summary = {
@@ -44,4 +38,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

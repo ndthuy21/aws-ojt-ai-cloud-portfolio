@@ -1,9 +1,9 @@
-# Image Waste Classifier
+# TACO Waste Dataset Preparation
 
-This project is a reproducible computer-vision-style classification demo. It
-generates small synthetic images for three classes, extracts simple image
-features, trains a softmax classifier with NumPy, and reports accuracy, macro F1
-score, and confusion matrix.
+This project documents a public computer-vision dataset preparation workflow
+using TACO (Trash Annotations in Context). It summarizes the conversion from raw
+TACO annotations into a YOLO-style object-detection dataset with six practical
+waste classes.
 
 ## Run
 
@@ -17,15 +17,19 @@ Outputs are written to:
 projects/image_waste_classifier/outputs/
 ```
 
+## Evidence
+
+- Source dataset: TACO public dataset.
+- Source size: 1,500 images, 4,784 annotations, 60 raw categories.
+- Output format: YOLO-style labels grouped into 6 classes.
+- Usable boxes written: 4,241.
+- Split: 1,200 train images, 150 validation images, 150 test images.
+- Validation checks passed: split size, label count, box count, label parsing,
+  and no duplicate image hashes between splits.
+
 ## AWS Extension
 
-- Store generated image data and model artifacts in S3.
-- Train or run inference on EC2.
-- Expose inference through a small API.
-- Log predictions and errors to CloudWatch.
-
-## Note
-
-The dataset is synthetic and intentionally small for reproducibility. The value
-of this project is the end-to-end pipeline structure, not the dataset itself.
-
+- Store raw images, YOLO labels, and reports in S3.
+- Run conversion and validation scripts on EC2 or AWS Batch.
+- Track dataset versions and validation reports before model training.
+- Send conversion logs and validation failures to CloudWatch.

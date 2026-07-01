@@ -1,0 +1,100 @@
+{
+  "settings": {
+    "split": {
+      "train": 0.8,
+      "val": 0.1,
+      "test": 0.1
+    },
+    "seed": 42,
+    "class_mode": "six_groups",
+    "min_category_count": 50
+  },
+  "source": {
+    "images": 1500,
+    "annotations": 4784,
+    "categories": 60
+  },
+  "summary": {
+    "output_classes": 6,
+    "written_bboxes": 4241,
+    "dropped_bboxes": 543,
+    "clamped_bboxes": 6,
+    "val_images": 150,
+    "val_labels": 150,
+    "train_images": 1200,
+    "train_labels": 1200,
+    "test_images": 150,
+    "test_labels": 150
+  },
+  "class_counts": {
+    "train": {
+      "paper_cardboard": 244,
+      "plastic_rigid": 924,
+      "metal": 376,
+      "glass": 194,
+      "plastic_film_wrapper": 618,
+      "other_litter": 1036
+    },
+    "val": {
+      "glass": 24,
+      "paper_cardboard": 31,
+      "other_litter": 130,
+      "plastic_rigid": 116,
+      "metal": 47,
+      "plastic_film_wrapper": 77
+    },
+    "test": {
+      "plastic_rigid": 115,
+      "other_litter": 130,
+      "metal": 47,
+      "plastic_film_wrapper": 77,
+      "paper_cardboard": 31,
+      "glass": 24
+    }
+  },
+  "dropped_category_counts": {
+    "Meal carton": 30,
+    "Food Can": 34,
+    "Aerosol": 10,
+    "Glass cup": 6,
+    "Drink carton": 45,
+    "Disposable food container": 38,
+    "Tissues": 42,
+    "Toilet tube": 5,
+    "Crisp packet": 39,
+    "Metal lid": 10,
+    "Egg carton": 11,
+    "Paper bag": 27,
+    "Plastic utensils": 37,
+    "Glass jar": 6,
+    "Food waste": 8,
+    "Squeezable tube": 7,
+    "Spread tub": 9,
+    "Shoe": 7,
+    "Garbage bag": 31,
+    "Six pack rings": 5,
+    "Foam cup": 13,
+    "Paper straw": 4,
+    "Aluminium blister pack": 6,
+    "Battery": 2,
+    "Rope & strings": 29,
+    "Other plastic container": 6,
+    "Polypropylene bag": 3,
+    "Scrap metal": 20,
+    "Magazine paper": 12,
+    "Pizza box": 3,
+    "Plastic glooves": 4,
+    "Wrapping paper": 12,
+    "Carded blister pack": 1,
+    "Foam food container": 15,
+    "Tupperware": 4,
+    "Other plastic cup": 2
+  },
+  "validation": {
+    "image_split_ok": true,
+    "label_count_ok": true,
+    "box_count_ok": true,
+    "no_label_errors": true,
+    "no_duplicate_hash_between_splits": true
+  }
+}

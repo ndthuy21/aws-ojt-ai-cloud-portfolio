@@ -1,0 +1,7 @@
+id,class,total,train,train_pct,val,val_pct,test,test_pct
+0,plastic_rigid,1155,924,80.0,116,10.04,115,9.96
+1,plastic_film_wrapper,772,618,80.05,77,9.97,77,9.97
+2,paper_cardboard,306,244,79.74,31,10.13,31,10.13
+3,metal,470,376,80.0,47,10.0,47,10.0
+4,glass,242,194,80.17,24,9.92,24,9.92
+5,other_litter,1296,1036,79.94,130,10.03,130,10.03

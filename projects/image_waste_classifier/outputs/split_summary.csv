@@ -1,0 +1,4 @@
+split,images,labels,boxes,classes_present
+train,1200,1200,3392,6
+val,150,150,425,6
+test,150,150,424,6

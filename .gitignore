@@ -3,3 +3,5 @@ __pycache__/
 *.pyc
 .venv/
 *.log
+data/public/*.zip
+data/public/air_quality/*.xlsx

@@ -1,0 +1,108 @@
+{
+  "summary": {
+    "train": {
+      "images": 1200,
+      "labels": 1200,
+      "boxes": 3392,
+      "classes_present": 6
+    },
+    "val": {
+      "images": 150,
+      "labels": 150,
+      "boxes": 425,
+      "classes_present": 6
+    },
+    "test": {
+      "images": 150,
+      "labels": 150,
+      "boxes": 424,
+      "classes_present": 6
+    }
+  },
+  "image_targets": {
+    "val": 150,
+    "test": 150,
+    "train": 1200
+  },
+  "output_classes": 6,
+  "classes_with_boxes": 6,
+  "checks": {
+    "image_split_ok": true,
+    "label_count_ok": true,
+    "box_count_ok": true,
+    "no_label_errors": true,
+    "no_duplicate_hash_between_splits": true
+  },
+  "max_class_ratio_error_pct": 0.261,
+  "errors": [],
+  "duplicate_hashes_between_splits": 0,
+  "duplicate_pairs": [],
+  "class_distribution": [
+    {
+      "id": 0,
+      "class": "plastic_rigid",
+      "total": 1155,
+      "train": 924,
+      "train_pct": 80.0,
+      "val": 116,
+      "val_pct": 10.04,
+      "test": 115,
+      "test_pct": 9.96
+    },
+    {
+      "id": 1,
+      "class": "plastic_film_wrapper",
+      "total": 772,
+      "train": 618,
+      "train_pct": 80.05,
+      "val": 77,
+      "val_pct": 9.97,
+      "test": 77,
+      "test_pct": 9.97
+    },
+    {
+      "id": 2,
+      "class": "paper_cardboard",
+      "total": 306,
+      "train": 244,
+      "train_pct": 79.74,
+      "val": 31,
+      "val_pct": 10.13,
+      "test": 31,
+      "test_pct": 10.13
+    },
+    {
+      "id": 3,
+      "class": "metal",
+      "total": 470,
+      "train": 376,
+      "train_pct": 80.0,
+      "val": 47,
+      "val_pct": 10.0,
+      "test": 47,
+      "test_pct": 10.0
+    },
+    {
+      "id": 4,
+      "class": "glass",
+      "total": 242,
+      "train": 194,
+      "train_pct": 80.17,
+      "val": 24,
+      "val_pct": 9.92,
+      "test": 24,
+      "test_pct": 9.92
+    },
+    {
+      "id": 5,
+      "class": "other_litter",
+      "total": 1296,
+      "train": 1036,
+      "train_pct": 79.94,
+      "val": 130,
+      "val_pct": 10.03,
+      "test": 130,
+      "test_pct": 10.03
+    }
+  ]
+}
