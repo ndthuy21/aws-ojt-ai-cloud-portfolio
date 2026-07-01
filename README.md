@@ -4,13 +4,29 @@ This repository is a compact, reproducible portfolio for AWS OJT Fall 2026.
 It focuses on practical AI/data work, AWS readiness, documentation, and cost-aware
 cloud deployment planning.
 
+## Project Links And Results
+
+| Project | Direct Link | Evidence |
+|---|---|---|
+| ML Inference API | [cloud_ready_ml_api](cloud_ready_ml_api/) | Local `/health` and `/predict` endpoints tested; unit tests included |
+| Image Waste Classifier | [projects/image_waste_classifier](projects/image_waste_classifier/) | 270 generated images, 3 classes, 54-test sample, accuracy 1.0000, macro F1 1.0000 |
+| Air Quality Forecasting | [projects/air_quality_forecasting](projects/air_quality_forecasting/) | 360 hourly readings, 68-test rows, MAE 3.3245, RMSE 4.1356 |
+| Weather Traffic Risk | [projects/weather_traffic_risk](projects/weather_traffic_risk/) | 420 records, 84-test rows, accuracy 0.7262, precision 0.8750, recall 0.5122, F1 0.6462 |
+
+## Current Status
+
+- Implemented and tested local prototypes.
+- Exported metrics, sample datasets, predictions, model weights, and confusion matrices.
+- Documented AWS deployment path as the next step: EC2, S3, IAM, CloudWatch, AWS CLI, and Free Tier cost control.
+- No AWS production deployment is claimed in this repository.
+
 ## What This Repo Shows
 
 - Python, data processing, and ML fundamentals.
 - Reproducible mini-projects with generated sample data.
 - Evaluation metrics such as accuracy, F1 score, confusion matrix, MAE, and RMSE.
-- A small HTTP inference API that can be deployed on an EC2 Linux instance.
-- AWS mapping for S3 artifacts, IAM least-privilege access, CloudWatch logs, and
+- A small HTTP inference API with a documented EC2 deployment path.
+- AWS learning map for S3 artifacts, IAM least-privilege access, CloudWatch logs, and
   Free Tier cost control.
 
 ## Project Structure
@@ -68,4 +84,3 @@ This repo is designed to support the following AWS OJT expectations:
 - AWS account preparation with billing awareness.
 - Hands-on project thinking, not only theory.
 - AI/ML and Data & Analytics track alignment.
-
